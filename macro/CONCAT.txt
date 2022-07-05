@@ -1,0 +1,14 @@
+Function CONCATENATEMULTIPLE(Ref As Range, Separator As String) As String
+Dim Cell As Range
+Dim Result As String
+For Each Cell In Ref
+ Result = Result & Cell.Value & Separator
+Next Cell
+CONCATENATEMULTIPLE = Left(Result, Len(Result) - 1)
+End Function
+
+
+
+
+FORMULA
+=IF(S48="Not Found","Not Found",IF(S48="","",CONCAT(S48,",",T48,",",U48,",",V48,",",W48,",",X48,",",Y48,",",W48,",",Z48,",",AA48,",",AB48,",",AC48,",",AD48,",",AE48,",",AD48,",",AE48)))

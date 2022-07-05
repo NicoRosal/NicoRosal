@@ -1,0 +1,6 @@
+Sub AppendToExistingOnRight()
+Dim c as range
+For each c in Selection
+If c.value <> "" Then c.value = c.value & "-CN"
+Next
+End Sub
